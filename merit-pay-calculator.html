@@ -29,8 +29,7 @@
     .merit-calc details.acc summary,
     .merit-calc .results-table thead th,
     .merit-calc .field label,
-    .merit-calc fieldset legend,
-    .merit-calc .intro-stats-label {
+    .merit-calc fieldset legend {
       font-family: 'Myriad Pro', 'Source Sans 3', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     }
 
@@ -109,17 +108,36 @@
       text-decoration: none;
     }
     .merit-calc .intro a:hover { text-decoration: underline; }
-    .merit-calc .intro-stats-label {
-      margin: 16px 0 6px;
+    /* Program statistics table (right column) */
+    .merit-calc .stats-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12px;
+      margin-top: 4px;
+    }
+    .merit-calc .stats-table th,
+    .merit-calc .stats-table td {
+      text-align: left;
+      padding: 6px 6px;
+      border-bottom: 1px solid #f0f0f0;
+      vertical-align: top;
+    }
+    .merit-calc .stats-table th:first-child,
+    .merit-calc .stats-table td:first-child { padding-left: 0; }
+    .merit-calc .stats-table thead th {
+      font-size: 11px;
+      font-weight: 700;
+      color: #555;
+      line-height: 1.25;
+      border-bottom: 2px solid #e2e2e2;
+    }
+    .merit-calc .stats-table tbody td { color: #444; }
+    .merit-calc .stats-table tbody td:first-child {
       font-weight: 700;
       color: #1a1a1a;
+      white-space: nowrap;
     }
-    .merit-calc .intro-stats {
-      margin: 0;
-      padding-left: 18px;
-      line-height: 1.7;
-    }
-    .merit-calc .intro-stats li { margin-bottom: 4px; }
+    .merit-calc .stats-table tbody tr:last-child td { border-bottom: none; }
 
     /* Cards */
     .merit-calc .card {
@@ -472,12 +490,6 @@
       <div class="intro">
         <p>The <a href="https://dese.ade.arkansas.gov/Offices/educator-effectiveness/merit-teacher-incentive-fund" target="_blank" rel="noopener noreferrer">Merit Teacher Incentive Fund</a>, established by the <a href="https://learns.ade.arkansas.gov/" target="_blank" rel="noopener noreferrer">LEARNS Act</a>, recognizes outstanding Arkansas educators by providing annual bonuses of up to $10,000. These awards are determined based on student growth performance, subject and geographic shortage designations, advanced licensure, and mentoring.</p>
         <p>While you can use this tool to <strong><em>estimate your eligibility</em></strong>, please note that the Arkansas Department of Education (DESE) calculates final bonus amounts each spring.</p>
-        <p class="intro-stats-label">Program Statistics</p>
-        <ul class="intro-stats">
-          <li><strong>2025–26:</strong> 4,857 educators received awards (Average bonus: $3,272)</li>
-          <li><strong>2024–25:</strong> 4,290 educators received awards (Average bonus: $3,323)</li>
-          <li><strong>2023–24:</strong> 2,937 educators received awards (Average bonus: $3,299)</li>
-        </ul>
       </div>
 
       <!-- Step 1: District -->
@@ -603,6 +615,26 @@
           </ul>
         </div>
       </details>
+
+      <!-- Program statistics -->
+      <div class="card stats-card">
+        <div class="card-label">Program Statistics</div>
+        <table class="stats-table">
+          <thead>
+            <tr>
+              <th scope="col">Academic Year</th>
+              <th scope="col">Educators Awarded</th>
+              <th scope="col">Average Bonus</th>
+              <th scope="col">Total Bonus Payouts</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>2025–26</td><td>4,857</td><td>$3,272</td><td>~$15.89M</td></tr>
+            <tr><td>2024–25</td><td>4,290</td><td>$3,323</td><td>$14.24M</td></tr>
+            <tr><td>2023–24</td><td>2,937</td><td>$3,299</td><td>~$9.69M</td></tr>
+          </tbody>
+        </table>
+      </div>
     </div>
 
   </div><!-- /.layout -->
