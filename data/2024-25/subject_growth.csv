@@ -1,0 +1,216 @@
+connect,grade,grade_band,subject,label,growth,shortage
+1,Kindergarten,elementary,"All Core Subjects (ELA, Math, Science, Social Studies)",Elementary Education,0,0
+2,1st Grade,elementary,"All Core Subjects (ELA, Math, Science, Social Studies)",Elementary Education,0,0
+3,2nd Grade,elementary,"All Core Subjects (ELA, Math, Science, Social Studies)",Elementary Education,0,0
+4,3rd Grade,elementary,"All Core Subjects (ELA, Math, Science, Social Studies)",Elementary Education,1,0
+5,4th Grade,elementary,"All Core Subjects (ELA, Math, Science, Social Studies)",Elementary Education,1,0
+6,5th Grade,elementary,"All Core Subjects (ELA, Math, Science, Social Studies)",Elementary Education,1,0
+14,Elementary Level (multiple grade),elementary,"All Core Subjects (ELA, Math, Science, Social Studies)",Elementary Education,1,0
+7,6th Grade,middle,Career & Technical Education (CTE),CTE,0,0
+8,7th Grade,middle,Career & Technical Education (CTE),CTE,0,0
+9,8th Grade,middle,Career & Technical Education (CTE),CTE,0,0
+10,9th Grade,secondary,Career & Technical Education (CTE),CTE,0,0
+11,10th Grade,secondary,Career & Technical Education (CTE),CTE,0,0
+12,11th Grade,secondary,Career & Technical Education (CTE),CTE,0,0
+13,12th Grade,secondary,Career & Technical Education (CTE),CTE,0,0
+15,Middle Level (multiple grade),middle,Career & Technical Education (CTE),CTE,0,0
+16,Secondary Level (multiple grades),secondary,Career & Technical Education (CTE),CTE,0,0
+7,6th Grade,middle,Computer Science,Computer Sciece,0,1
+8,7th Grade,middle,Computer Science,Computer Sciece,0,1
+9,8th Grade,middle,Computer Science,Computer Sciece,0,1
+10,9th Grade,secondary,Computer Science,Computer Sciece,0,1
+11,10th Grade,secondary,Computer Science,Computer Sciece,0,1
+12,11th Grade,secondary,Computer Science,Computer Sciece,0,1
+13,12th Grade,secondary,Computer Science,Computer Sciece,0,1
+15,Middle Level (multiple grade),middle,Computer Science,Computer Sciece,0,1
+16,Secondary Level (multiple grades),secondary,Computer Science,Computer Sciece,0,1
+1,Kindergarten,elementary,Counselor,Counselor,0,0
+2,1st Grade,elementary,Counselor,Counselor,0,0
+3,2nd Grade,elementary,Counselor,Counselor,0,0
+4,3rd Grade,elementary,Counselor,Counselor,0,0
+5,4th Grade,elementary,Counselor,Counselor,0,0
+6,5th Grade,elementary,Counselor,Counselor,0,0
+7,6th Grade,middle,Counselor,Counselor,0,0
+8,7th Grade,middle,Counselor,Counselor,0,0
+9,8th Grade,middle,Counselor,Counselor,0,0
+10,9th Grade,secondary,Counselor,Counselor,0,0
+11,10th Grade,secondary,Counselor,Counselor,0,0
+12,11th Grade,secondary,Counselor,Counselor,0,0
+13,12th Grade,secondary,Counselor,Counselor,0,0
+14,Elementary Level (multiple grade),elementary,Counselor,Counselor,0,0
+15,Middle Level (multiple grade),middle,Counselor,Counselor,0,0
+16,Secondary Level (multiple grades),secondary,Counselor,Counselor,0,0
+1,Kindergarten,elementary,English Language Arts,English Language Arts,0,0
+2,1st Grade,elementary,English Language Arts,English Language Arts,0,0
+3,2nd Grade,elementary,English Language Arts,English Language Arts,0,0
+4,3rd Grade,elementary,English Language Arts,English Language Arts,1,0
+5,4th Grade,elementary,English Language Arts,English Language Arts,1,0
+6,5th Grade,elementary,English Language Arts,English Language Arts,1,0
+7,6th Grade,middle,English Language Arts,English Language Arts,1,0
+8,7th Grade,middle,English Language Arts,English Language Arts,1,0
+9,8th Grade,middle,English Language Arts,English Language Arts,1,0
+10,9th Grade,secondary,English Language Arts,English Language Arts,1,0
+11,10th Grade,secondary,English Language Arts,English Language Arts,1,0
+12,11th Grade,secondary,English Language Arts,English Language Arts,0,0
+13,12th Grade,secondary,English Language Arts,English Language Arts,0,0
+14,Elementary Level (multiple grade),elementary,English Language Arts,English Language Arts,1,0
+15,Middle Level (multiple grade),middle,English Language Arts,English Language Arts,1,0
+16,Secondary Level (multiple grades),secondary,English Language Arts,English Language Arts,1,0
+1,Kindergarten,elementary,"Fine Arts (e.g. Art, Music)",Fine Arts,0,0
+2,1st Grade,elementary,"Fine Arts (e.g. Art, Music)",Fine Arts,0,0
+3,2nd Grade,elementary,"Fine Arts (e.g. Art, Music)",Fine Arts,0,0
+4,3rd Grade,elementary,"Fine Arts (e.g. Art, Music)",Fine Arts,0,0
+5,4th Grade,elementary,"Fine Arts (e.g. Art, Music)",Fine Arts,0,0
+6,5th Grade,elementary,"Fine Arts (e.g. Art, Music)",Fine Arts,0,0
+7,6th Grade,middle,"Fine Arts (e.g. Art, Music)",Fine Arts,0,0
+8,7th Grade,middle,"Fine Arts (e.g. Art, Music)",Fine Arts,0,0
+9,8th Grade,middle,"Fine Arts (e.g. Art, Music)",Fine Arts,0,0
+10,9th Grade,secondary,"Fine Arts (e.g. Art, Music)",Fine Arts,0,0
+11,10th Grade,secondary,"Fine Arts (e.g. Art, Music)",Fine Arts,0,0
+12,11th Grade,secondary,"Fine Arts (e.g. Art, Music)",Fine Arts,0,0
+13,12th Grade,secondary,"Fine Arts (e.g. Art, Music)",Fine Arts,0,0
+14,Elementary Level (multiple grade),elementary,"Fine Arts (e.g. Art, Music)",Fine Arts,0,0
+15,Middle Level (multiple grade),middle,"Fine Arts (e.g. Art, Music)",Fine Arts,0,0
+16,Secondary Level (multiple grades),secondary,"Fine Arts (e.g. Art, Music)",Fine Arts,0,0
+7,6th Grade,middle,Foreign Language,Foreign Language,0,1
+8,7th Grade,middle,Foreign Language,Foreign Language,0,1
+9,8th Grade,middle,Foreign Language,Foreign Language,0,1
+10,9th Grade,secondary,Foreign Language,Foreign Language,0,1
+11,10th Grade,secondary,Foreign Language,Foreign Language,0,1
+12,11th Grade,secondary,Foreign Language,Foreign Language,0,1
+13,12th Grade,secondary,Foreign Language,Foreign Language,0,1
+15,Middle Level (multiple grade),middle,Foreign Language,Foreign Language,0,1
+16,Secondary Level (multiple grades),secondary,Foreign Language,Foreign Language,0,1
+1,Kindergarten,elementary,Gifted and Talented,GT,0,0
+2,1st Grade,elementary,Gifted and Talented,GT,0,0
+3,2nd Grade,elementary,Gifted and Talented,GT,0,0
+4,3rd Grade,elementary,Gifted and Talented,GT,0,0
+5,4th Grade,elementary,Gifted and Talented,GT,0,0
+6,5th Grade,elementary,Gifted and Talented,GT,0,0
+7,6th Grade,middle,Gifted and Talented,GT,0,0
+8,7th Grade,middle,Gifted and Talented,GT,0,0
+9,8th Grade,middle,Gifted and Talented,GT,0,0
+10,9th Grade,secondary,Gifted and Talented,GT,0,0
+11,10th Grade,secondary,Gifted and Talented,GT,0,0
+12,11th Grade,secondary,Gifted and Talented,GT,0,0
+13,12th Grade,secondary,Gifted and Talented,GT,0,0
+14,Elementary Level (multiple grade),elementary,Gifted and Talented,GT,0,0
+15,Middle Level (multiple grade),middle,Gifted and Talented,GT,0,0
+16,Secondary Level (multiple grades),secondary,Gifted and Talented,GT,0,0
+1,Kindergarten,elementary,Library Media Specialist,Library Media Specialist,0,0
+2,1st Grade,elementary,Library Media Specialist,Library Media Specialist,0,0
+3,2nd Grade,elementary,Library Media Specialist,Library Media Specialist,0,0
+4,3rd Grade,elementary,Library Media Specialist,Library Media Specialist,0,0
+5,4th Grade,elementary,Library Media Specialist,Library Media Specialist,0,0
+6,5th Grade,elementary,Library Media Specialist,Library Media Specialist,0,0
+7,6th Grade,middle,Library Media Specialist,Library Media Specialist,0,0
+8,7th Grade,middle,Library Media Specialist,Library Media Specialist,0,0
+9,8th Grade,middle,Library Media Specialist,Library Media Specialist,0,0
+10,9th Grade,secondary,Library Media Specialist,Library Media Specialist,0,0
+11,10th Grade,secondary,Library Media Specialist,Library Media Specialist,0,0
+12,11th Grade,secondary,Library Media Specialist,Library Media Specialist,0,0
+13,12th Grade,secondary,Library Media Specialist,Library Media Specialist,0,0
+14,Elementary Level (multiple grade),elementary,Library Media Specialist,Library Media Specialist,0,0
+15,Middle Level (multiple grade),middle,Library Media Specialist,Library Media Specialist,0,0
+16,Secondary Level (multiple grades),secondary,Library Media Specialist,Library Media Specialist,0,0
+1,Kindergarten,elementary,Math,Math,0,0
+2,1st Grade,elementary,Math,Math,0,0
+3,2nd Grade,elementary,Math,Math,0,0
+4,3rd Grade,elementary,Math,Math,1,0
+5,4th Grade,elementary,Math,Math,1,0
+6,5th Grade,elementary,Math,Math,1,0
+7,6th Grade,middle,Math,Math,1,0
+8,7th Grade,middle,Math,Math,1,0
+9,8th Grade,middle,Math,Math,1,0
+10,9th Grade,secondary,Math,Math,1,1
+11,10th Grade,secondary,Math,Math,1,1
+12,11th Grade,secondary,Math,Math,0,1
+13,12th Grade,secondary,Math,Math,0,1
+14,Elementary Level (multiple grade),elementary,Math,Math,1,0
+15,Middle Level (multiple grade),middle,Math,Math,1,0
+16,Secondary Level (multiple grades),secondary,Math,Math,1,1
+1,Kindergarten,elementary,Physical Education & Health,PE and Health,0,0
+2,1st Grade,elementary,Physical Education & Health,PE and Health,0,0
+3,2nd Grade,elementary,Physical Education & Health,PE and Health,0,0
+4,3rd Grade,elementary,Physical Education & Health,PE and Health,0,0
+5,4th Grade,elementary,Physical Education & Health,PE and Health,0,0
+6,5th Grade,elementary,Physical Education & Health,PE and Health,0,0
+7,6th Grade,middle,Physical Education & Health,PE and Health,0,0
+8,7th Grade,middle,Physical Education & Health,PE and Health,0,0
+9,8th Grade,middle,Physical Education & Health,PE and Health,0,0
+10,9th Grade,secondary,Physical Education & health,PE and Health,0,0
+11,10th Grade,secondary,Physical Education & health,PE and Health,0,0
+12,11th Grade,secondary,Physical Education & health,PE and Health,0,0
+13,12th Grade,secondary,Physical Education & health,PE and Health,0,0
+14,Elementary Level (multiple grade),elementary,Physical Education & Health,PE and Health,0,0
+15,Middle Level (multiple grade),middle,Physical Education & Health,PE and Health,0,0
+16,Secondary Level (multiple grades),secondary,Physical Education & health,PE and Health,0,0
+1,Kindergarten,elementary,Science,Science,0,0
+2,1st Grade,elementary,Science,Science,0,0
+3,2nd Grade,elementary,Science,Science,0,0
+4,3rd Grade,elementary,Science,Science,1,0
+5,4th Grade,elementary,Science,Science,1,0
+6,5th Grade,elementary,Science,Science,1,0
+7,6th Grade,middle,Science,Science,1,0
+8,7th Grade,middle,Science,Science,1,0
+9,8th Grade,middle,Science,Science,1,0
+14,Elementary Level (multiple grade),elementary,Science,Science,1,0
+15,Middle Level (multiple grade),middle,Science,Science,1,0
+10,9th Grade,secondary,Science,Science,1,1
+11,10th Grade,secondary,Science,Science,1,1
+12,11th Grade,secondary,Science,Science,0,1
+13,12th Grade,secondary,Science,Science,0,1
+16,Secondary Level (multiple grades),secondary,Science,Science,1,1
+1,Kindergarten,elementary,Social Studies,Social Studies,0,0
+2,1st Grade,elementary,Social Studies,Social Studies,0,0
+3,2nd Grade,elementary,Social Studies,Social Studies,0,0
+4,3rd Grade,elementary,Social Studies,Social Studies,0,0
+5,4th Grade,elementary,Social Studies,Social Studies,0,0
+6,5th Grade,elementary,Social Studies,Social Studies,0,0
+14,Elementary Level (multiple grade),elementary,Social Studies,Social Studies,0,0
+7,6th Grade,middle,Social Studies/History,Social Studies,0,0
+8,7th Grade,middle,Social Studies/History,Social Studies,0,0
+9,8th Grade,middle,Social Studies/History,Social Studies,0,0
+10,9th Grade,secondary,Social Studies/History,Social Studies,0,0
+11,10th Grade,secondary,Social Studies/History,Social Studies,0,0
+12,11th Grade,secondary,Social Studies/History,Social Studies,0,0
+13,12th Grade,secondary,Social Studies/History,Social Studies,0,0
+15,Middle Level (multiple grade),middle,Social Studies/History,Social Studies,0,1
+16,Secondary Level (multiple grades),secondary,Social Studies/History,Social Studies,0,0
+1,Kindergarten,elementary,Special Education,Special Education,0,1
+2,1st Grade,elementary,Special Education,Special Education,0,1
+3,2nd Grade,elementary,Special Education,Special Education,0,1
+4,3rd Grade,elementary,Special Education,Special Education,1,1
+5,4th Grade,elementary,Special Education,Special Education,1,1
+6,5th Grade,elementary,Special Education,Special Education,1,1
+7,6th Grade,middle,Special Education,Special Education,1,1
+8,7th Grade,middle,Special Education,Special Education,1,1
+9,8th Grade,middle,Special Education,Special Education,1,1
+10,9th Grade,secondary,Special Education,Special Education,1,1
+11,10th Grade,secondary,Special Education,Special Education,1,1
+12,11th Grade,secondary,Special Education,Special Education,0,1
+13,12th Grade,secondary,Special Education,Special Education,0,1
+14,Elementary Level (multiple grade),elementary,Special Education,Special Education,1,1
+15,Middle Level (multiple grade),middle,Special Education,Special Education,0,1
+16,Secondary Level (multiple grades),secondary,Special Education,Special Education,1,1
+10,9th Grade,secondary,STEM,STEM,0,0
+11,10th Grade,secondary,STEM,STEM,0,0
+12,11th Grade,secondary,STEM,STEM,0,0
+13,12th Grade,secondary,STEM,STEM,0,0
+16,Secondary Level (multiple grades),secondary,STEM,STEM,0,0
+1,Kindergarten,elementary,Technology,Technology,0,0
+2,1st Grade,elementary,Technology,Technology,0,0
+3,2nd Grade,elementary,Technology,Technology,0,0
+4,3rd Grade,elementary,Technology,Technology,0,0
+5,4th Grade,elementary,Technology,Technology,0,0
+6,5th Grade,elementary,Technology,Technology,0,0
+7,6th Grade,middle,Technology,Technology,0,0
+8,7th Grade,middle,Technology,Technology,0,0
+9,8th Grade,middle,Technology,Technology,0,0
+10,9th Grade,secondary,Technology,Technology,0,0
+11,10th Grade,secondary,Technology,Technology,0,0
+12,11th Grade,secondary,Technology,Technology,0,0
+13,12th Grade,secondary,Technology,Technology,0,0
+14,Elementary Level (multiple grade),elementary,Technology,Technology,0,0
+15,Middle Level (multiple grade),middle,Technology,Technology,0,0
+16,Secondary Level (multiple grades),secondary,Technology,Technology,0,0
