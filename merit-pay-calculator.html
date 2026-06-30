@@ -189,7 +189,10 @@
       max-width: 1100px;
       margin: 0 auto;
     }
-    .merit-calc .calc-main .intro,
+    .merit-calc #panel-cal > .intro {
+      max-width: 1100px;
+      margin: 0 auto 24px;
+    }
     .merit-calc .calc-main .form-section,
     .merit-calc .calc-main .submit-row { max-width: 620px; }
 
@@ -613,12 +616,13 @@
 
     <!-- Calculator -->
     <div class="tab-panel" id="panel-cal" role="tabpanel" aria-labelledby="tab-cal" tabindex="0">
+      <div class="intro">
+        <p>The <a href="https://dese.ade.arkansas.gov/Offices/educator-effectiveness/merit-teacher-incentive-fund" target="_blank" rel="noopener noreferrer">Merit Teacher Incentive Fund</a> (<a href="https://learns.ade.arkansas.gov/" target="_blank" rel="noopener noreferrer">LEARNS Act</a>) provides Arkansas educators annual bonuses of up to $10,000. Based on your qualifications, this tool estimates what you <strong style="font-weight:900">could</strong> receive — final awards are set by DESE each spring.</p>
+      </div>
+
       <div class="calc-layout">
       <div class="calc-col-form">
       <div class="calc-main">
-        <div class="intro">
-          <p>The <a href="https://dese.ade.arkansas.gov/Offices/educator-effectiveness/merit-teacher-incentive-fund" target="_blank" rel="noopener noreferrer">Merit Teacher Incentive Fund</a> (<a href="https://learns.ade.arkansas.gov/" target="_blank" rel="noopener noreferrer">LEARNS Act</a>) provides Arkansas educators annual bonuses of up to $10,000. Based on your qualifications, this tool estimates what you <strong style="font-weight:900">could</strong> receive — final awards are set by DESE each spring.</p>
-        </div>
 
         <div class="form-section">
           <div class="section-label">Your School</div>
