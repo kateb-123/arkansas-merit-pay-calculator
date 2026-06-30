@@ -15,15 +15,15 @@ connect,grade,grade_band,subject,label,growth,shortage
 13,12th Grade,secondary,Career & Technical Education (CTE),CTE,0,0
 15,Middle Level (multiple grade),middle,Career & Technical Education (CTE),CTE,0,0
 16,Secondary Level (multiple grades),secondary,Career & Technical Education (CTE),CTE,0,0
-7,6th Grade,middle,Computer Science,Computer Sciece,0,1
-8,7th Grade,middle,Computer Science,Computer Sciece,0,1
-9,8th Grade,middle,Computer Science,Computer Sciece,0,1
-10,9th Grade,secondary,Computer Science,Computer Sciece,0,1
-11,10th Grade,secondary,Computer Science,Computer Sciece,0,1
-12,11th Grade,secondary,Computer Science,Computer Sciece,0,1
-13,12th Grade,secondary,Computer Science,Computer Sciece,0,1
-15,Middle Level (multiple grade),middle,Computer Science,Computer Sciece,0,1
-16,Secondary Level (multiple grades),secondary,Computer Science,Computer Sciece,0,1
+7,6th Grade,middle,Computer Science,Computer Science,0,1
+8,7th Grade,middle,Computer Science,Computer Science,0,1
+9,8th Grade,middle,Computer Science,Computer Science,0,1
+10,9th Grade,secondary,Computer Science,Computer Science,0,1
+11,10th Grade,secondary,Computer Science,Computer Science,0,1
+12,11th Grade,secondary,Computer Science,Computer Science,0,1
+13,12th Grade,secondary,Computer Science,Computer Science,0,1
+15,Middle Level (multiple grade),middle,Computer Science,Computer Science,0,1
+16,Secondary Level (multiple grades),secondary,Computer Science,Computer Science,0,1
 1,Kindergarten,elementary,Counselor,Counselor,0,0
 2,1st Grade,elementary,Counselor,Counselor,0,0
 3,2nd Grade,elementary,Counselor,Counselor,0,0
