@@ -73,28 +73,56 @@
       margin: 0;
     }
 
-    .merit-calc .layout {
+    /* Info tabs under the header */
+    .merit-calc .tabs-wrap {
+      max-width: 1100px;
+      margin: 0 auto 28px;
+      background: #fff;
+      border: 1px solid #e2e2e2;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+    .merit-calc .tabs {
       display: flex;
-      gap: 24px;
-      align-items: flex-start;
+      flex-wrap: wrap;
+      background: #fafafa;
+      border-bottom: 1px solid #e2e2e2;
+    }
+    .merit-calc .tab {
+      appearance: none;
+      background: transparent;
+      border: none;
+      border-bottom: 3px solid transparent;
+      margin-bottom: -1px;
+      padding: 14px 18px;
+      font-family: 'Myriad Pro', 'Source Sans 3', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      color: #767676;
+      cursor: pointer;
+      transition: color 0.15s, border-color 0.15s, background 0.15s;
+    }
+    .merit-calc .tab:hover { color: #00573F; }
+    .merit-calc .tab[aria-selected="true"] {
+      color: #00573F;
+      background: #fff;
+      border-bottom-color: #00573F;
+    }
+    .merit-calc .tab:focus-visible {
+      outline: 3px solid #00573F;
+      outline-offset: -3px;
+    }
+    .merit-calc .tab-panel { padding: 20px 22px 18px; }
+    .merit-calc .tab-panel[hidden] { display: none; }
+    .merit-calc .tab-panel .acc-body { padding: 0; }
+
+    /* Calculator (full width, below tabs) */
+    .merit-calc .calc-main {
       max-width: 1100px;
       margin: 0 auto;
     }
-
-    .merit-calc .form-col {
-      flex: 1 1 0;
-      min-width: 0;
-    }
-
-    .merit-calc .info-col {
-      flex: 0 0 300px;
-      width: 300px;
-    }
-
-    @media (max-width: 720px) {
-      .merit-calc .layout { flex-direction: column; }
-      .merit-calc .info-col { flex: 1 1 auto; width: 100%; order: -1; }
-    }
+    .merit-calc .calc-main .intro,
+    .merit-calc .calc-main .card { max-width: 620px; }
 
     .merit-calc .intro {
       color: #555;
@@ -482,10 +510,98 @@
     </div>
   </div>
 
-  <div class="layout">
+  <!-- Info tabs under the header -->
+  <div class="tabs-wrap">
+    <div class="tabs" role="tablist" aria-label="Program information">
+      <button class="tab" id="tab-0" role="tab" aria-selected="true" aria-controls="panel-0">Program Statistics</button>
+      <button class="tab" id="tab-1" role="tab" aria-selected="false" tabindex="-1" aria-controls="panel-1">Basic Eligibility Requirements</button>
+      <button class="tab" id="tab-2" role="tab" aria-selected="false" tabindex="-1" aria-controls="panel-2">How Bonuses Work</button>
+      <button class="tab" id="tab-3" role="tab" aria-selected="false" tabindex="-1" aria-controls="panel-3">Resources</button>
+    </div>
+    <div class="tab-panel" id="panel-0" role="tabpanel" aria-labelledby="tab-0" tabindex="0">
+      <table class="stats-table">
+          <thead>
+            <tr>
+              <th scope="col">Academic Year</th>
+              <th scope="col">Educators Awarded</th>
+              <th scope="col">Average Bonus</th>
+              <th scope="col">Total Bonus Payouts</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>2025–26</td><td>4,857</td><td>$3,272</td><td>~$15.89M</td></tr>
+            <tr><td>2024–25</td><td>4,290</td><td>$3,323</td><td>$14.24M</td></tr>
+            <tr><td>2023–24</td><td>2,937</td><td>$3,299</td><td>~$9.69M</td></tr>
+          </tbody>
+        </table>
+    </div>
+    <div class="tab-panel" id="panel-1" role="tabpanel" aria-labelledby="tab-1" tabindex="0" hidden>
+      <div class="acc-body">
+          <p>To qualify for any merit pay, teachers must:</p>
+          <ul>
+            <li>Hold a standard or provisional Arkansas teaching license</li>
+            <li>Have at least 3 years of teaching experience</li>
+            <li>Spend 70% or more of contracted time with students</li>
+            <li>Demonstrate positive student growth on state assessments</li>
+            <li>Have no current ethics violations</li>
+          </ul>
+          <p style="font-size:13px;color:#767676;margin-top:10px;margin-bottom:0;">Eligible roles include classroom teachers, special education teachers, library media specialists, and school counselors.</p>
+        </div>
+    </div>
+    <div class="tab-panel" id="panel-2" role="tabpanel" aria-labelledby="tab-2" tabindex="0" hidden>
+      <div class="acc-body">
+          <p>Bonuses <strong>stack</strong> across categories up to the $10,000 cap. For example, a 9th grade science teacher in a geographic shortage district with top-25% growth could earn $7,000 ($3,000 + $2,500 + $1,500).</p>
+          <p>Fixed bonuses (paid if you qualify):</p>
+          <ul>
+            <li><strong>$2,500</strong> — Subject shortage area</li>
+            <li><strong>$1,500</strong> — Geographic shortage district</li>
+            <li><strong>$1,500</strong> — Lead or Master Professional Educator designation</li>
+            <li><strong>$3,000</strong> — Mentor teacher for a yearlong resident</li>
+          </ul>
+          <p style="margin-top:10px;margin-bottom:4px;">Student growth bonus, based on your statewide 3-year percentile rank:</p>
+          <div class="tier-list" role="table" aria-label="Student growth bonus tiers">
+            <div class="tier-row" role="row">
+              <span role="cell">Top 25%</span><span class="tier-amt" role="cell">$3,000</span>
+            </div>
+            <div class="tier-row" role="row">
+              <span role="cell">Top 5%</span><span class="tier-amt" role="cell">$6,000</span>
+            </div>
+            <div class="tier-row" role="row">
+              <span role="cell">Top 1%</span><span class="tier-amt" role="cell">$9,000</span>
+            </div>
+            <div class="tier-row tier-max" role="row">
+              <span role="cell">Top 0.5%</span><span class="tier-amt" role="cell">$10,000</span>
+            </div>
+          </div>
+          <p style="font-size:13px;color:#767676;margin-top:8px;margin-bottom:0;">DESE determines your growth tier each spring. All bonuses combined are capped at $10,000.</p>
+        </div>
+    </div>
+    <div class="tab-panel" id="panel-3" role="tabpanel" aria-labelledby="tab-3" tabindex="0" hidden>
+      <div class="acc-body res-links">
+          <ul>
+            <li>
+              <svg class="icon-ext" aria-hidden="true" width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 2H2a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V8" stroke="#00573F" stroke-width="1.5" stroke-linecap="round"/><path d="M8 1h4v4" stroke="#00573F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 1L6.5 6.5" stroke="#00573F" stroke-width="1.5" stroke-linecap="round"/></svg>
+              <a href="https://dese.ade.arkansas.gov/Offices/educator-effectiveness/merit-teacher-incentive-fund" target="_blank" rel="noopener noreferrer">Merit Teacher Incentive Fund — Arkansas DESE</a>
+            </li>
+            <li>
+              <svg class="icon-ext" aria-hidden="true" width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 2H2a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V8" stroke="#00573F" stroke-width="1.5" stroke-linecap="round"/><path d="M8 1h4v4" stroke="#00573F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 1L6.5 6.5" stroke="#00573F" stroke-width="1.5" stroke-linecap="round"/></svg>
+              <a href="https://dese.ade.arkansas.gov/Offices/educator-effectiveness/merit-teacher-incentive-fund/merit-pay-eligibility--amounts" target="_blank" rel="noopener noreferrer">Merit Pay Eligibility &amp; Amounts — Arkansas DESE</a>
+            </li>
+            <li>
+              <svg class="icon-ext" aria-hidden="true" width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 2H2a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V8" stroke="#00573F" stroke-width="1.5" stroke-linecap="round"/><path d="M8 1h4v4" stroke="#00573F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 1L6.5 6.5" stroke="#00573F" stroke-width="1.5" stroke-linecap="round"/></svg>
+              <a href="https://oep.uark.edu/explaining-the-2026-arkansas-merit-teacher-incentive-fund-program/" target="_blank" rel="noopener noreferrer">Explaining the 2026 MTIF Program — U of A Office of Education Policy</a>
+            </li>
+            <li>
+              <span class="badge-pdf" aria-label="PDF document">PDF</span>
+              <a href="https://dese.ade.arkansas.gov/Files/2025_Merit_Incentive_Business_Rules_6.20.25_EEF.pdf" target="_blank" rel="noopener noreferrer">2025 Merit Incentive Business Rules — Arkansas DESE</a>
+            </li>
+          </ul>
+        </div>
+    </div>
+  </div>
 
-    <!-- Left column: form -->
-    <div class="form-col">
+  <!-- Calculator -->
+  <div class="calc-main">
 
       <div class="intro">
         <p>The <a href="https://dese.ade.arkansas.gov/Offices/educator-effectiveness/merit-teacher-incentive-fund" target="_blank" rel="noopener noreferrer">Merit Teacher Incentive Fund</a>, established by the <a href="https://learns.ade.arkansas.gov/" target="_blank" rel="noopener noreferrer">LEARNS Act</a>, recognizes outstanding Arkansas educators by providing annual bonuses of up to $10,000. These awards are determined based on student growth performance, subject and geographic shortage designations, advanced licensure, and mentoring.</p>
@@ -545,99 +661,7 @@
         <button class="submit-btn" id="submit-btn">See Merit Pay Eligibility</button>
       </div>
 
-    </div>
-
-    <!-- Right column: accordion info -->
-    <div class="info-col">
-
-      <!-- Program statistics -->
-      <div class="card stats-card">
-        <div class="card-label">Program Statistics</div>
-        <table class="stats-table">
-          <thead>
-            <tr>
-              <th scope="col">Academic Year</th>
-              <th scope="col">Educators Awarded</th>
-              <th scope="col">Average Bonus</th>
-              <th scope="col">Total Bonus Payouts</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr><td>2025–26</td><td>4,857</td><td>$3,272</td><td>~$15.89M</td></tr>
-            <tr><td>2024–25</td><td>4,290</td><td>$3,323</td><td>$14.24M</td></tr>
-            <tr><td>2023–24</td><td>2,937</td><td>$3,299</td><td>~$9.69M</td></tr>
-          </tbody>
-        </table>
-      </div>
-      <details class="acc">
-        <summary>Basic Eligibility Requirements</summary>
-        <div class="acc-body">
-          <p>To qualify for any merit pay, teachers must:</p>
-          <ul>
-            <li>Hold a standard or provisional Arkansas teaching license</li>
-            <li>Have at least 3 years of teaching experience</li>
-            <li>Spend 70% or more of contracted time with students</li>
-            <li>Demonstrate positive student growth on state assessments</li>
-            <li>Have no current ethics violations</li>
-          </ul>
-          <p style="font-size:13px;color:#767676;margin-top:10px;margin-bottom:0;">Eligible roles include classroom teachers, special education teachers, library media specialists, and school counselors.</p>
-        </div>
-      </details>
-      <details class="acc">
-        <summary>How Bonuses Work</summary>
-        <div class="acc-body">
-          <p>Bonuses <strong>stack</strong> across categories up to the $10,000 cap. For example, a 9th grade science teacher in a geographic shortage district with top-25% growth could earn $7,000 ($3,000 + $2,500 + $1,500).</p>
-          <p>Fixed bonuses (paid if you qualify):</p>
-          <ul>
-            <li><strong>$2,500</strong> — Subject shortage area</li>
-            <li><strong>$1,500</strong> — Geographic shortage district</li>
-            <li><strong>$1,500</strong> — Lead or Master Professional Educator designation</li>
-            <li><strong>$3,000</strong> — Mentor teacher for a yearlong resident</li>
-          </ul>
-          <p style="margin-top:10px;margin-bottom:4px;">Student growth bonus, based on your statewide 3-year percentile rank:</p>
-          <div class="tier-list" role="table" aria-label="Student growth bonus tiers">
-            <div class="tier-row" role="row">
-              <span role="cell">Top 25%</span><span class="tier-amt" role="cell">$3,000</span>
-            </div>
-            <div class="tier-row" role="row">
-              <span role="cell">Top 5%</span><span class="tier-amt" role="cell">$6,000</span>
-            </div>
-            <div class="tier-row" role="row">
-              <span role="cell">Top 1%</span><span class="tier-amt" role="cell">$9,000</span>
-            </div>
-            <div class="tier-row tier-max" role="row">
-              <span role="cell">Top 0.5%</span><span class="tier-amt" role="cell">$10,000</span>
-            </div>
-          </div>
-          <p style="font-size:13px;color:#767676;margin-top:8px;margin-bottom:0;">DESE determines your growth tier each spring. All bonuses combined are capped at $10,000.</p>
-        </div>
-      </details>
-      <details class="acc">
-        <summary>Resources</summary>
-        <div class="acc-body res-links">
-          <ul>
-            <li>
-              <svg class="icon-ext" aria-hidden="true" width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 2H2a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V8" stroke="#00573F" stroke-width="1.5" stroke-linecap="round"/><path d="M8 1h4v4" stroke="#00573F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 1L6.5 6.5" stroke="#00573F" stroke-width="1.5" stroke-linecap="round"/></svg>
-              <a href="https://dese.ade.arkansas.gov/Offices/educator-effectiveness/merit-teacher-incentive-fund" target="_blank" rel="noopener noreferrer">Merit Teacher Incentive Fund — Arkansas DESE</a>
-            </li>
-            <li>
-              <svg class="icon-ext" aria-hidden="true" width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 2H2a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V8" stroke="#00573F" stroke-width="1.5" stroke-linecap="round"/><path d="M8 1h4v4" stroke="#00573F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 1L6.5 6.5" stroke="#00573F" stroke-width="1.5" stroke-linecap="round"/></svg>
-              <a href="https://dese.ade.arkansas.gov/Offices/educator-effectiveness/merit-teacher-incentive-fund/merit-pay-eligibility--amounts" target="_blank" rel="noopener noreferrer">Merit Pay Eligibility &amp; Amounts — Arkansas DESE</a>
-            </li>
-            <li>
-              <svg class="icon-ext" aria-hidden="true" width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 2H2a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V8" stroke="#00573F" stroke-width="1.5" stroke-linecap="round"/><path d="M8 1h4v4" stroke="#00573F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 1L6.5 6.5" stroke="#00573F" stroke-width="1.5" stroke-linecap="round"/></svg>
-              <a href="https://oep.uark.edu/explaining-the-2026-arkansas-merit-teacher-incentive-fund-program/" target="_blank" rel="noopener noreferrer">Explaining the 2026 MTIF Program — U of A Office of Education Policy</a>
-            </li>
-            <li>
-              <span class="badge-pdf" aria-label="PDF document">PDF</span>
-              <a href="https://dese.ade.arkansas.gov/Files/2025_Merit_Incentive_Business_Rules_6.20.25_EEF.pdf" target="_blank" rel="noopener noreferrer">2025 Merit Incentive Business Rules — Arkansas DESE</a>
-            </li>
-          </ul>
-        </div>
-      </details>
-    </div>
-
-  </div><!-- /.layout -->
+  </div>
 
   <!-- Results -->
   <div class="results-section hidden" id="results-section" aria-live="polite" aria-atomic="true">
@@ -960,6 +984,37 @@
     resultsSection.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
   });
 
+})();
+</script>
+<script>
+(function() {
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('.merit-calc .tab'));
+  if (!tabs.length) return;
+
+  function select(tab) {
+    tabs.forEach(function(t) {
+      var on = t === tab;
+      t.setAttribute('aria-selected', on ? 'true' : 'false');
+      t.tabIndex = on ? 0 : -1;
+      var panel = document.getElementById(t.getAttribute('aria-controls'));
+      if (panel) panel.hidden = !on;
+    });
+  }
+
+  tabs.forEach(function(tab, i) {
+    tab.addEventListener('click', function() { select(tab); });
+    tab.addEventListener('keydown', function(e) {
+      var idx;
+      if (e.key === 'ArrowRight' || e.key === 'ArrowDown') idx = (i + 1) % tabs.length;
+      else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') idx = (i - 1 + tabs.length) % tabs.length;
+      else if (e.key === 'Home') idx = 0;
+      else if (e.key === 'End') idx = tabs.length - 1;
+      else return;
+      e.preventDefault();
+      tabs[idx].focus();
+      select(tabs[idx]);
+    });
+  });
 })();
 </script>
 </body>
