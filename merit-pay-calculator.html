@@ -14,7 +14,7 @@
       font-family: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
       font-size: 16px;
       color: #1a1a1a;
-      background: #f5f5f5;
+      background: #fff;
       padding: 32px 24px 48px;
       box-sizing: border-box;
       -webkit-font-smoothing: antialiased;
@@ -111,29 +111,49 @@
     .merit-calc .tab-panel[hidden] { display: none; }
     .merit-calc .tab-panel .acc-body { padding: 0; }
 
-    /* About tab */
-    .merit-calc .jump-nav {
+    /* About tab — sticky sidebar nav + content */
+    .merit-calc .about-layout {
       display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 8px 16px;
-      margin-bottom: 16px;
-      font-size: 14px;
+      gap: 36px;
+      align-items: flex-start;
     }
-    .merit-calc .jump-label { font-weight: 700; color: #767676; }
-    .merit-calc .jump-nav a {
-      color: #00573F;
-      font-weight: 700;
+    .merit-calc .about-nav {
+      flex: 0 0 210px;
+      position: sticky;
+      top: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .merit-calc .about-nav a {
+      color: #767676;
       text-decoration: none;
+      font-size: 16px;
+      line-height: 1.35;
+      padding: 7px 0 7px 14px;
+      border-left: 2px solid #e2e2e2;
+      transition: color 0.15s, border-color 0.15s, font-weight 0.15s;
     }
-    .merit-calc .jump-nav a:hover { text-decoration: underline; }
-    .merit-calc .about-section { scroll-margin-top: 16px; }
+    .merit-calc .about-nav a:hover { color: #00573F; }
+    .merit-calc .about-nav a.active {
+      color: #00573F;
+      font-weight: 800;
+      border-left-color: #00573F;
+    }
+    .merit-calc .about-content { flex: 1 1 0; min-width: 0; }
+    .merit-calc .about-section { scroll-margin-top: 16px; margin-bottom: 36px; }
+    .merit-calc .about-content .about-section:last-child { margin-bottom: 0; }
     .merit-calc .about-h {
       font-family: 'Myriad Pro', 'Source Sans 3', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
       font-size: 18px;
       font-weight: 800;
       color: #00573F;
       margin: 0 0 12px;
+    }
+
+    @media (max-width: 640px) {
+      .merit-calc .about-layout { flex-direction: column; gap: 16px; }
+      .merit-calc .about-nav { position: static; flex-basis: auto; width: 100%; }
     }
 
     /* Calculator (full width, below tabs) */
@@ -160,7 +180,7 @@
     .merit-calc .stats-table {
       width: 100%;
       border-collapse: collapse;
-      font-size: 12px;
+      font-size: 16px;
       margin-top: 4px;
     }
     .merit-calc .stats-table th,
@@ -173,7 +193,7 @@
     .merit-calc .stats-table th:first-child,
     .merit-calc .stats-table td:first-child { padding-left: 0; }
     .merit-calc .stats-table thead th {
-      font-size: 11px;
+      font-size: 16px;
       font-weight: 700;
       color: #555;
       line-height: 1.25;
@@ -390,7 +410,7 @@
       border-radius: 5px;
       overflow: hidden;
       margin: 8px 0 4px;
-      font-size: 13px;
+      font-size: 16px;
     }
     .merit-calc .tier-row {
       display: flex;
@@ -541,7 +561,7 @@
     <div class="tab-panel" id="panel-cal" role="tabpanel" aria-labelledby="tab-cal" tabindex="0">
       <div class="calc-main">
         <div class="intro">
-          <p>The <a href="https://dese.ade.arkansas.gov/Offices/educator-effectiveness/merit-teacher-incentive-fund" target="_blank" rel="noopener noreferrer">Merit Teacher Incentive Fund</a> (<a href="https://learns.ade.arkansas.gov/" target="_blank" rel="noopener noreferrer">LEARNS Act</a>) provides annual bonuses up to $10,000 for outstanding Arkansas educators — use this tool to <strong><em>estimate your eligibility</em></strong>. Final amounts are calculated by DESE each spring.</p>
+          <p>The <a href="https://dese.ade.arkansas.gov/Offices/educator-effectiveness/merit-teacher-incentive-fund" target="_blank" rel="noopener noreferrer">Merit Teacher Incentive Fund</a> (<a href="https://learns.ade.arkansas.gov/" target="_blank" rel="noopener noreferrer">LEARNS Act</a>) offers Arkansas educators annual bonuses of up to $10,000. This tool estimates the bonuses you <strong><em>may be eligible for</em></strong> based on your qualifications — a picture of what you <strong>could</strong> receive, not a guaranteed amount. Actual awards are determined by the Arkansas Department of Education (DESE) each spring.</p>
         </div>
 
       <!-- Step 1: District -->
@@ -621,14 +641,15 @@
 
     <!-- About -->
     <div class="tab-panel" id="panel-about" role="tabpanel" aria-labelledby="tab-about" tabindex="0" hidden>
-      <nav class="jump-nav" aria-label="Jump to section">
-        <span class="jump-label">Jump to:</span>
-        <a href="#sec-stats">Program Statistics</a>
-        <a href="#sec-elig">Basic Eligibility Requirements</a>
-        <a href="#sec-bonus">How Bonuses Work</a>
-        <a href="#sec-res">Resources</a>
-      </nav>
-      <section class="card about-section" id="sec-stats">
+      <div class="about-layout">
+        <nav class="about-nav" aria-label="Sections">
+          <a href="#sec-stats" class="active">Program Statistics</a>
+          <a href="#sec-elig">Basic Eligibility Requirements</a>
+          <a href="#sec-bonus">How Bonuses Work</a>
+          <a href="#sec-res">Resources</a>
+        </nav>
+        <div class="about-content">
+      <section class="about-section" id="sec-stats">
         <h2 class="about-h">Program Statistics</h2>
               <table class="stats-table">
           <thead>
@@ -646,7 +667,7 @@
           </tbody>
         </table>
       </section>
-      <section class="card about-section" id="sec-elig">
+      <section class="about-section" id="sec-elig">
         <h2 class="about-h">Basic Eligibility Requirements</h2>
               <div class="acc-body">
           <p>To qualify for any merit pay, teachers must:</p>
@@ -657,10 +678,10 @@
             <li>Demonstrate positive student growth on state assessments</li>
             <li>Have no current ethics violations</li>
           </ul>
-          <p style="font-size:13px;color:#767676;margin-top:10px;margin-bottom:0;">Eligible roles include classroom teachers, special education teachers, library media specialists, and school counselors.</p>
+          <p style="font-size:16px;color:#767676;margin-top:10px;margin-bottom:0;">Eligible roles include classroom teachers, special education teachers, library media specialists, and school counselors.</p>
         </div>
       </section>
-      <section class="card about-section" id="sec-bonus">
+      <section class="about-section" id="sec-bonus">
         <h2 class="about-h">How Bonuses Work</h2>
               <div class="acc-body">
           <p>Bonuses <strong>stack</strong> across categories up to the $10,000 cap. For example, a 9th grade science teacher in a geographic shortage district with top-25% growth could earn $7,000 ($3,000 + $2,500 + $1,500).</p>
@@ -686,10 +707,10 @@
               <span role="cell">Top 0.5%</span><span class="tier-amt" role="cell">$10,000</span>
             </div>
           </div>
-          <p style="font-size:13px;color:#767676;margin-top:8px;margin-bottom:0;">DESE determines your growth tier each spring. All bonuses combined are capped at $10,000.</p>
+          <p style="font-size:16px;color:#767676;margin-top:8px;margin-bottom:0;">DESE determines your growth tier each spring. All bonuses combined are capped at $10,000.</p>
         </div>
       </section>
-      <section class="card about-section" id="sec-res">
+      <section class="about-section" id="sec-res">
         <h2 class="about-h">Resources</h2>
               <div class="acc-body res-links">
           <ul>
@@ -712,6 +733,8 @@
           </ul>
         </div>
       </section>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -1047,8 +1070,11 @@
     });
   });
 
-  // "Jump to" links on the About tab — smooth scroll without changing the URL hash
-  document.querySelectorAll('.merit-calc .jump-nav a').forEach(function(link) {
+  // About sidebar nav — click to smooth-scroll, and highlight the section in view
+  var navLinks = Array.prototype.slice.call(document.querySelectorAll('.merit-calc .about-nav a'));
+  var byId = {};
+  navLinks.forEach(function(link) {
+    byId[link.getAttribute('href').slice(1)] = link;
     link.addEventListener('click', function(e) {
       var target = document.getElementById(link.getAttribute('href').slice(1));
       if (target) {
@@ -1057,6 +1083,29 @@
       }
     });
   });
+
+  // Scroll-spy: bold the nav link for whichever section is currently in view
+  var sections = Array.prototype.slice.call(document.querySelectorAll('.merit-calc .about-section'));
+  function updateSpy() {
+    if (!sections.length) return;
+    var line = window.innerHeight * 0.3;
+    var current = sections[0];
+    sections.forEach(function(s) {
+      if (s.getBoundingClientRect().top <= line) current = s;
+    });
+    // Near the bottom of the page, the last section can't reach the line — force it
+    if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2) {
+      current = sections[sections.length - 1];
+    }
+    navLinks.forEach(function(l) { l.classList.remove('active'); });
+    if (current && byId[current.id]) byId[current.id].classList.add('active');
+  }
+  window.addEventListener('scroll', updateSpy, { passive: true });
+  window.addEventListener('resize', updateSpy, { passive: true });
+  // Recompute when the About tab is opened
+  var aboutTab = document.getElementById('tab-about');
+  if (aboutTab) aboutTab.addEventListener('click', function() { setTimeout(updateSpy, 0); });
+  updateSpy();
 })();
 </script>
 </body>
