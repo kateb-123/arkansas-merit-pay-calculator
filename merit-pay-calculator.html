@@ -162,7 +162,33 @@
       margin: 0 auto;
     }
     .merit-calc .calc-main .intro,
-    .merit-calc .calc-main .card { max-width: 620px; }
+    .merit-calc .calc-main .form-section,
+    .merit-calc .calc-main .submit-row { max-width: 620px; }
+
+    /* Flat form (no cards) */
+    .merit-calc .form-section { margin-bottom: 28px; }
+    .merit-calc .section-label {
+      font-family: 'Myriad Pro', 'Source Sans 3', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+      color: #767676;
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #ececec;
+    }
+    .merit-calc .ss-input:disabled {
+      background-color: #f7f7f7;
+      color: #aaa;
+      cursor: not-allowed;
+    }
+    .merit-calc .submit-row { margin-top: 4px; }
+    .merit-calc .form-hint {
+      color: #c0392b;
+      font-size: 15px;
+      margin: 10px 0 0;
+    }
 
     .merit-calc .intro {
       color: #555;
@@ -564,41 +590,37 @@
           <p>The <a href="https://dese.ade.arkansas.gov/Offices/educator-effectiveness/merit-teacher-incentive-fund" target="_blank" rel="noopener noreferrer">Merit Teacher Incentive Fund</a> (<a href="https://learns.ade.arkansas.gov/" target="_blank" rel="noopener noreferrer">LEARNS Act</a>) provides Arkansas educators annual bonuses of up to $10,000. Based on your qualifications, this tool estimates what you <strong style="font-weight:900">could</strong> receive — final awards are set by DESE each spring.</p>
         </div>
 
-      <!-- Step 1: District -->
-      <div class="card">
-        <div class="card-label">Your School</div>
-        <div class="field">
-          <label for="district-input">District:</label>
-          <div class="ss-wrap" id="district-wrap" role="combobox" aria-expanded="false" aria-haspopup="listbox" aria-owns="district-list">
-            <input id="district-input" class="ss-input" type="text" placeholder="Select or type to search a district" autocomplete="off" aria-autocomplete="list" aria-controls="district-list">
-            <ul class="ss-dropdown hidden" id="district-list" role="listbox" aria-label="Districts"></ul>
+        <div class="form-section">
+          <div class="section-label">Your School</div>
+          <div class="field">
+            <label for="district-input">District:</label>
+            <div class="ss-wrap" id="district-wrap" role="combobox" aria-expanded="false" aria-haspopup="listbox" aria-owns="district-list">
+              <input id="district-input" class="ss-input" type="text" placeholder="Select or type to search a district" autocomplete="off" aria-autocomplete="list" aria-controls="district-list">
+              <ul class="ss-dropdown hidden" id="district-list" role="listbox" aria-label="Districts"></ul>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Step 2: Teaching -->
-      <div class="card hidden" id="teaching-card">
-        <div class="card-label">Your Teaching</div>
-        <div class="field">
-          <label for="grade-input">Grade Level:</label>
-          <div class="ss-wrap" id="grade-wrap" role="combobox" aria-expanded="false" aria-haspopup="listbox" aria-owns="grade-list">
-            <input id="grade-input" class="ss-input" type="text" placeholder="Select or type to search a grade" autocomplete="off" aria-autocomplete="list" aria-controls="grade-list">
-            <ul class="ss-dropdown hidden" id="grade-list" role="listbox" aria-label="Grade levels"></ul>
+        <div class="form-section">
+          <div class="section-label">Your Teaching</div>
+          <div class="field">
+            <label for="grade-input">Grade Level:</label>
+            <div class="ss-wrap" id="grade-wrap" role="combobox" aria-expanded="false" aria-haspopup="listbox" aria-owns="grade-list">
+              <input id="grade-input" class="ss-input" type="text" placeholder="Select or type to search a grade" autocomplete="off" aria-autocomplete="list" aria-controls="grade-list">
+              <ul class="ss-dropdown hidden" id="grade-list" role="listbox" aria-label="Grade levels"></ul>
+            </div>
+          </div>
+          <div class="field">
+            <label for="subject-input">Subject:</label>
+            <div class="ss-wrap" id="subject-wrap" role="combobox" aria-expanded="false" aria-haspopup="listbox" aria-owns="subject-list">
+              <input id="subject-input" class="ss-input" type="text" placeholder="Select a grade first" autocomplete="off" aria-autocomplete="list" aria-controls="subject-list" disabled>
+              <ul class="ss-dropdown hidden" id="subject-list" role="listbox" aria-label="Subjects"></ul>
+            </div>
           </div>
         </div>
-        <div class="field">
-          <label for="subject-input">Subject:</label>
-          <div class="ss-wrap" id="subject-wrap" role="combobox" aria-expanded="false" aria-haspopup="listbox" aria-owns="subject-list">
-            <input id="subject-input" class="ss-input" type="text" placeholder="Select or type to search a subject" autocomplete="off" aria-autocomplete="list" aria-controls="subject-list">
-            <ul class="ss-dropdown hidden" id="subject-list" role="listbox" aria-label="Subjects"></ul>
-          </div>
-        </div>
-      </div>
 
-      <!-- Step 3: Qualifications + Submit -->
-      <div id="quals-block" class="hidden">
-        <div class="card">
-          <div class="card-label">Your Qualifications</div>
+        <div class="form-section">
+          <div class="section-label">Your Qualifications</div>
           <fieldset>
             <legend>Do you hold a <a href="https://dese.ade.arkansas.gov/Offices/educator-effectiveness/educator-career-continuum-/lead-professional-educator-designation" target="_blank">Lead Professional Educator</a> or <a href="https://dese.ade.arkansas.gov/Offices/educator-effectiveness/educator-career-continuum-/master-professional-educator-designation-pathways" target="_blank">Master Professional Educator</a> designation?</legend>
             <div class="radio-group">
@@ -614,8 +636,11 @@
             </div>
           </fieldset>
         </div>
-        <button class="submit-btn" id="submit-btn">See Merit Pay Eligibility</button>
-      </div>
+
+        <div class="submit-row">
+          <button class="submit-btn" id="submit-btn">See Merit Pay Eligibility</button>
+          <p class="form-hint hidden" id="form-hint" role="alert">Please select your district, grade, and subject first.</p>
+        </div>
       </div>
   <!-- Results -->
   <div class="results-section hidden" id="results-section" aria-live="polite" aria-atomic="true">
@@ -893,13 +918,12 @@
   // ── DOM refs ──────────────────────────────────────────────────────────
   const districtInput  = document.getElementById('district-input');
   const districtList   = document.getElementById('district-list');
-  const teachingCard   = document.getElementById('teaching-card');
   const gradeInput     = document.getElementById('grade-input');
   const gradeList      = document.getElementById('grade-list');
   const subjectInput   = document.getElementById('subject-input');
   const subjectList    = document.getElementById('subject-list');
-  const qualsBlock     = document.getElementById('quals-block');
   const submitBtn      = document.getElementById('submit-btn');
+  const formHint       = document.getElementById('form-hint');
   const resultsSection = document.getElementById('results-section');
   const resultsBody    = document.getElementById('results-body');
   const capNote        = document.getElementById('cap-note');
@@ -914,17 +938,6 @@
 
   const districtSelect = buildSelect(districtInput, districtList, districtNames, (val) => {
     selectedDistrict = val;
-    gradeSelect.clear();
-    subjectSelect.clear();
-    selectedGrade = null;
-    selectedSubject = null;
-    if (val) {
-      teachingCard.classList.remove('hidden');
-    } else {
-      teachingCard.classList.add('hidden');
-      qualsBlock.classList.add('hidden');
-      resultsSection.classList.add('hidden');
-    }
   });
 
   const gradeSelect = buildSelect(gradeInput, gradeList, GRADE_ORDER, (val) => {
@@ -934,29 +947,26 @@
     if (val) {
       const subjects = [...new Set(SUBJ.filter(r => r.g === val).map(r => r.sub))];
       subjectSelect.setOptions(subjects);
+      subjectInput.disabled = false;
+      subjectInput.placeholder = 'Select or type to search a subject';
     } else {
       subjectSelect.setOptions([]);
+      subjectInput.disabled = true;
+      subjectInput.placeholder = 'Select a grade first';
     }
-    updateQualsVisibility();
   });
 
   const subjectSelect = buildSelect(subjectInput, subjectList, [], (val) => {
     selectedSubject = val;
-    updateQualsVisibility();
   });
-
-  function updateQualsVisibility() {
-    if (selectedGrade && selectedSubject) {
-      qualsBlock.classList.remove('hidden');
-    } else {
-      qualsBlock.classList.add('hidden');
-      resultsSection.classList.add('hidden');
-    }
-  }
 
   // ── Calculate ─────────────────────────────────────────────────────────
   submitBtn.addEventListener('click', () => {
-    if (!selectedDistrict || !selectedGrade || !selectedSubject) return;
+    if (!selectedDistrict || !selectedGrade || !selectedSubject) {
+      formHint.classList.remove('hidden');
+      return;
+    }
+    formHint.classList.add('hidden');
 
     const geoRow  = GEO.find(d => d.n === selectedDistrict);
     const subjRow = SUBJ.find(r => r.g === selectedGrade && r.sub === selectedSubject);
