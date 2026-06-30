@@ -29,7 +29,8 @@
     .merit-calc details.acc summary,
     .merit-calc .results-table thead th,
     .merit-calc .field label,
-    .merit-calc fieldset legend {
+    .merit-calc fieldset legend,
+    .merit-calc .intro-stats-label {
       font-family: 'Myriad Pro', 'Source Sans 3', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     }
 
@@ -70,6 +71,24 @@
       line-height: 1.75;
       margin: 0 0 16px;
     }
+    .merit-calc .intro p { margin: 0 0 12px; }
+    .merit-calc .intro a {
+      color: #00573F;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .merit-calc .intro a:hover { text-decoration: underline; }
+    .merit-calc .intro-stats-label {
+      margin: 16px 0 6px;
+      font-weight: 700;
+      color: #1a1a1a;
+    }
+    .merit-calc .intro-stats {
+      margin: 0;
+      padding-left: 18px;
+      line-height: 1.7;
+    }
+    .merit-calc .intro-stats li { margin-bottom: 4px; }
 
     /* Cards */
     .merit-calc .card {
@@ -416,9 +435,16 @@
     <!-- Left column: form -->
     <div class="form-col">
 
-      <p class="intro">
-        The <strong>Merit Teacher Incentive Fund (MTIF)</strong>, established by the LEARNS Act, provides annual bonuses of up to $10,000 to recognize outstanding Arkansas educators. In 2025–26, 4,857 educators received awards totaling nearly $16 million, with an average bonus of $3,272 (up from over 4,200 teachers and $14.24 million in 2024–25). Bonuses are based on student growth performance, subject and geographic shortage designations, advanced licensure, and mentoring. Use this tool to estimate your eligibility — final amounts are calculated by DESE each spring.
-      </p>
+      <div class="intro">
+        <p>The <a href="https://dese.ade.arkansas.gov/Offices/educator-effectiveness/merit-teacher-incentive-fund" target="_blank" rel="noopener noreferrer">Merit Teacher Incentive Fund</a>, established by the <a href="https://learns.ade.arkansas.gov/" target="_blank" rel="noopener noreferrer">LEARNS Act</a>, recognizes outstanding Arkansas educators by providing annual bonuses of up to $10,000. These awards are determined based on student growth performance, subject and geographic shortage designations, advanced licensure, and mentoring.</p>
+        <p>While you can use this tool to estimate your eligibility, please note that the Arkansas Department of Education (DESE) calculates final bonus amounts each spring.</p>
+        <p class="intro-stats-label">Program Statistics</p>
+        <ul class="intro-stats">
+          <li><strong>2025–26:</strong> 4,857 educators received awards (Average bonus: $3,272)</li>
+          <li><strong>2024–25:</strong> 4,290 educators received awards (Average bonus: $3,323)</li>
+          <li><strong>2023–24:</strong> 2,937 educators received awards (Average bonus: $3,299)</li>
+        </ul>
+      </div>
 
       <!-- Step 1: District -->
       <div class="card">
